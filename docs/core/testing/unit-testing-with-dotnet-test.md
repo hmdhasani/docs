@@ -1,6 +1,6 @@
 ---
 title: Unit Testing in .NET Core using dotnet test | Microsoft Docs
-description: Unit Testing in .NET Core using dotnet test
+w description: Unit Testing in .NET Core using dotnet test
 keywords: .NET, .NET Core
 author: ardalis
 ms.author: wiwagn
@@ -10,7 +10,7 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdcdb812-6f13-4f20-9e90-0c0977937142
 ---
-
+e
 # Unit Testing in .NET Core using dotnet test
 
 By [Steve Smith](http://ardalis.com) and [Bill Wagner](https://github.com/BillWagner)
@@ -20,7 +20,7 @@ By [Steve Smith](http://ardalis.com) and [Bill Wagner](https://github.com/BillWa
 ## Creating the Projects
 
 [Writing Libraries with Cross Platform Tools](../tutorials/libraries.md)
-has information on organizing multi-project solutions for both the
+nhas information on organizing multi-project solutions for both the
 source and the tests. This article follows those conventions. The
 final project structure will be something like this:
 
@@ -64,7 +64,7 @@ namespace Prime.Services
 
 Next, cd back into the 'unit-testing-using-dotnet-test' directory, and create the `PrimeServices.Tests` directory.
 CD into the `PrimeService.Tests` directory and create a new project using
-`dotnet new xunit`. `dotnet xunit` creates a test project
+`dotnet new xunit`. `dotnet new xunit` creates a test project
 that uses xUnit as the test library. 
 
 The generated template configured the test runner
@@ -118,6 +118,9 @@ then repeating the process. So, let's write that one failing test. Remove
 C# file named `PrimeService_IsPrimeShould.cs` with the following content:
 
 ```cs
+using Xunit;
+using Prime.Services;
+
 namespace Prime.UnitTests.Services
 {
     public class PrimeService_IsPrimeShould
